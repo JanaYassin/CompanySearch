@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Table</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="tb-body">
+  <div class="table-container">
+    <table>
+        <tr>
+            <th colspan="3">DATA</th>
+        </tr>
+        <tr>
+            <td class="bd-color"># Name</td>
+            <td class="bd-color"><input type="date" class="input-date" ></td>
+            <td class="bd-color"><input type="date" class="input-date" ></td>
+        </tr>
+        <tr>
+            <td>minorityInterest</td>
+            <td><div class="green"><span>1.15B</span></div></td>
+            <td><div class="red"><span>665M</span></div></td>
+        </tr>
+        <tr>
+            <td>netincome</td>
+            <td><div class="green"><span>1.45B</span></div></td>
+            <td><div class="green"><span>1.49B</span></div></td>
+        </tr>
+        <tr>
+            <td>sellingGeneralAdministrative</td>
+            <td><div class="green"><span>721M</span></div></td>
+            <td><div class="red"><span>862M</span></div></td>
+        </tr>
+        <tr>
+            <td>grossProfit</td>
+            <td><div class="red"><span>27M</span></div></td>
+            <td><div class="red"><span>27</span></div></td>
+        </tr>
+        <tr>
+            <td>ebit</td>
+            <td><div class="green"><span>1.15B</span></div></td>
+            <td><div class="red"><span>665M</span></div></td>
+        </tr>
+        <tr>
+            <td>operatingIncome</td>
+            <td><div class="green"><span>1.45B</span></div></td>
+            <td><div class="green"><span>1.49B</span></div></td>
+        </tr>
+        <tr>
+            <td>otherOperatingExpenses</td>
+            <td><div class="red"><span>721M</span></div></td>
+            <td><div class="red"><span>862M</span></div></td>
+        </tr>
+        <tr>
+            <td>interestExpenses</td>
+            <td><div class="green"><span>27M</span></div></td>
+            <td><div class="green"><span>27M</span></div></td>
+        </tr>
+      
+    </table>
+  </div>
+</body>
+</html>
+<script>
+function getTodayDate() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+const inputDates = document.querySelectorAll('input[type="date"]');
+const todayDate = getTodayDate();
+inputDates.forEach((input) => {
+  input.value = todayDate;
+});
+
+
+</script>
