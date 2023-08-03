@@ -8,7 +8,7 @@
   height: 100vh;
   font-family: Arial, sans-serif;
   background-image: url("images/Screen1.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F3F3FB;
